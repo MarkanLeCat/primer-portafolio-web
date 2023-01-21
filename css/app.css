@@ -1,0 +1,577 @@
+@charset 'utf-8'; /* Estableciendo codificación de carácteres */
+
+/* Importando hojas de estilo externas */
+
+@import './reset.css';
+
+@import './grid-view.css';
+
+/* Importando fuentes externas*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-Regular.ttf');
+}
+
+body {
+    font-family: "Lato";
+}
+
+.container {
+    background-color: var(--purple-blue);
+    border-radius: 10px;
+    box-shadow: rgba(75, 71, 71, 0.2) 5px 5px 10px 0px;
+}
+
+/* Header */
+
+#menu {
+    font-family: "Roboto Slab";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bluish-black);
+    color: var(--mint);
+}
+
+#logo {
+    display: inline-flex;
+    align-items: center;
+    margin: 0rem 3rem;
+}
+
+#logo img {
+    margin-right: 1rem;
+    height: 105px;
+    width: 105px;
+}
+
+#logo figcaption {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#navbar {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#list-group {
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto 1.5rem;
+}
+
+.list-item > a {
+    text-decoration: none;
+    color: var(--mint);
+    padding: 15px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.list-item > a:hover {
+    text-decoration: none;
+    background-color: var(--purple-blue);
+    border-radius: 10px;
+    color: var(--light-gray);
+    transition: 0.5s;
+}
+
+/* Footer */
+
+footer {
+    font-family: "Lato";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-payne);
+}
+
+.footer-block {
+    color: var(--ashes);
+    font-size: 1.5rem;
+}
+
+.footer-block::before {
+    background-color: var(--intense-lila);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 75px;
+    margin: 10px auto 15px;
+}
+
+.footer-block::after {
+    background-color: var(--intense-lila);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 75px;
+    margin: 20px auto 10px;
+}
+
+/* Mensaje de Presentación */
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../assets/images/fondos/image-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 84vh;
+}
+
+#welcome-message {
+    font-family: "Lato";
+    color: var(--light-gray);
+}
+
+#welcome-message h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+#welcome-message h1 strong {
+    color: var(--intense-lila);
+}
+
+/* Estilos de secciones de páginas */
+
+.section-padding {
+    padding: 50px 0 0 0;
+}
+
+.section-header {
+    display: block;
+}
+
+.section-title {
+    font-family: "Roboto Slab";
+    font-size: 4.5rem;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 800;
+    color: var(--mint);
+    margin-bottom: 25px;
+}
+
+.section-title::after {
+    background-color: var(--purple-blue);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 75px;
+    margin: 10px auto 20px;
+}
+
+p {
+    margin: 0 0 25px 0;
+    font-family: "Lato";
+    font-size: 1.825rem;
+    text-align: justify;
+    color: var(--light-gray);
+}
+
+/* Sección Acerca de */
+
+#about-me {
+    background-color: var(--bluish-black);
+}
+
+#description {
+    padding-top: 3.5%;
+    padding-right: 5%;
+}
+
+#description p:last-child {
+    margin-bottom: 0px;
+}
+
+#photo figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#photo img {
+    width: 85%;
+    height: 370px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Sección Servicios */
+
+#services {
+    background-color: var(--bluish-black);
+}
+
+#services h2::before {
+    background-color: var(--purple-blue);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 100rem;
+    margin: 10px auto 20px;
+}
+
+#tech-skills {
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills img {
+    height: 80px;
+    width: 80px;
+}
+
+.skills img:hover {
+    animation: Stack-Spinner infinite 5s linear;
+}
+
+/* Animaciones de logos de Servicios */
+
+@keyframes Stack-Spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#lang {
+    margin: -1.75rem 0 3rem 17rem;
+}
+
+#lang figcaption {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--light-gray);
+    text-align: center;
+    margin-top: 10px;
+}
+
+#services-description p {
+    text-align: center;
+    margin: auto 12rem;
+    font-size: 2.1rem;
+}
+
+/* Sección Proyectos */
+
+#projects {
+    background-color: var(--bluish-black);
+}
+
+#projects h2::before {
+    background-color: var(--purple-blue);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 100rem;
+    margin: 10px auto 20px;
+}
+
+#piti {
+    margin: 1rem 0 0 9rem;
+}
+
+#piti p {
+    text-align: center;
+}
+
+#piti figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#piti figcaption {
+    font-family: "Roboto Slab";
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--mint);
+}
+
+#piti img {
+    width: 90%;
+    height: 370px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#calmass {
+    margin: 7rem 0 0 4rem;
+}
+
+#calmass p {
+    text-align: center;
+}
+
+#calmass figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#calmass figcaption {
+    font-family: "Roboto Slab";
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--mint);
+}
+
+#calmass img {
+    width: 95%;
+    height: 370px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#sumador {
+    margin: 3.5rem 0 0 13.5rem;
+}
+
+#sumador p {
+    text-align: center;
+}
+
+#sumador figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#sumador figcaption {
+    font-family: "Roboto Slab";
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--mint);
+}
+
+#sumador img {
+    width: 90%;
+    height: 370px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#buscaminas {
+    margin: 9rem 0 0 3.5rem;
+}
+
+#buscaminas p {
+    text-align: center;
+}
+
+#buscaminas figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#buscaminas figcaption {
+    font-family: "Roboto Slab";
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--mint);
+}
+
+#buscaminas img {
+    width: 90%;
+    height: 370px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#ing-test {
+    margin: -8rem 0 0 6rem;
+}
+
+#ing-test p {
+    text-align: center;
+}
+
+#ing-test figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#ing-test figcaption {
+    font-family: "Roboto Slab";
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--mint);
+}
+
+#ing-test img {
+    width: 90%;
+    height: 370px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Sección Contacto */
+
+#contact {
+    background-color: var(--bluish-black);
+}
+
+#contact h2::before {
+    background-color: var(--purple-blue);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 100rem;
+    margin: 10px auto 20px;
+}
+
+#contact p {
+    text-align: center;
+}
+
+#form .col {
+    position: relative;
+}
+
+input {
+    line-height: normal;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 100;
+    outline: 0;
+    display: block;
+    max-width: 100%;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: "Lato";
+    font-size: 1.5rem;
+    font-weight: 100;
+    outline: 0;
+    display: block;
+    max-width: 100%;
+    min-height: 50px;
+    overflow: auto;
+    resize: none;
+    border: 2px var(--intense-lila) solid;
+    background-color: var(--light-gray);
+}
+
+#form input[type="text"], #form input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border: 2px var(--intense-lila) solid;
+    background-color: var(--light-gray);
+}
+
+#form input[type="text"]:focus,
+#form input[type="email"]:focus,
+#form textarea:focus {
+    border: 2px var(--mint) solid;
+}
+
+#form #send {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 25px auto 0 auto;
+    color: var(--intense-lila);
+    border: 2px var(--mint) solid;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+#form #send:hover {
+    background-color: var(--mint);
+    color: var(--white);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* Extra small devices */
+@media screen and (max-width: 575.98px) {
+
+}
+
+/* Small devices */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    
+}
+
+/* Extra large devices */
+@media screen and (min-width: 1200px) {
+    
+}
